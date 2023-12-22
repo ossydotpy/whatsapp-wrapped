@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Cloud Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to the Word Cloud Generator!</h1>
+            <p>Turn your Whatsapp Chat history into a beautiful word cloud.</p>
+        </header>
+        <section class="upload-section">
+            <form action="/" method="post" enctype="multipart/form-data">
+                <label for="file" class="upload-label">
+                    <span>Choose a chat file</span>
+                    <input type="file" name="file" id="file" accept=".txt">
+                </label>
+                <button type="submit">Generate Word Cloud</button>
+            </form>
+        </section>
+        <footer>
+            <p>Created with ❤️ by ossydotpy</p>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Cloud Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Your Word Cloud</h1>
+        </header>
+        <section class="wordcloud-section">
+            <img src="{{ url_for('static', filename='wordcloud.png') }}" alt="Word Cloud" class="responsive-image">
+        </section>
+        <section class="download-section">
+            <a href="{{ url_for('download_wordcloud') }}" class="download-link" download="wordcloud.png">
+                Download Word Cloud
+            </a>
+        </section>
+        <footer>
+            <p>Created with ❤️ by ossydotpy</p>
+        </footer>
+    </div>
+</body>
+
+</html>
