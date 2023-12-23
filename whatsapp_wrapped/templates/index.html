@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}Word Cloud Generator{% endblock %}
+
+{% block header_title %}Welcome to the WhatsApp Wrapped!{% endblock %}
+{% block header_description %}Recap your chat history with your favorite people.{% endblock %}
+
+{% block content %}
+    <div class="hero-section">
+        <div class="hero-text">
+            <h2>Your whatsapp year in recap...</h2>
+            <p>Revisit the special moments you had with your loved ones this year!</p>
+            <a href="#upload-section" class="scroll-to-upload">Get started</a>
+        </div>
+        <div class="hero-image">
+            <img src="{{ url_for('static', filename='hero-image.jpg') }}" alt="Word Cloud Visualization">
+        </div>
+    </div>
+
+    <div class="upload-section" id="upload-section">
+        <h2>Upload Your Chat File</h2>
+        <form action="/" method="post" enctype="multipart/form-data">
+            <label for="file" class="upload-label">
+                <span>Choose a chat file</span>
+                <input type="file" name="file" id="file" accept=".txt">
+            </label>
+            <button type="submit">Generate Word Cloud</button>
+        </form>
+        <div class="instructions">
+            <p>Ensure your chat file is in text format (.txt).</p>
+            <p>Click the "Choose a chat file" button and select your file.</p>
+            <p>Hit "Generate Word Cloud" to see the magic!</p>
+        </div>
+    </div>
+{% endblock %}

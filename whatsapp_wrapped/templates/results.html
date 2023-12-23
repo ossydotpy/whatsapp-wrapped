@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Word Cloud Results{% endblock %}
+
+{% block content %}
+    <header>
+        <h1>Your Whatsapp Wrapped!</h1>
+    </header>
+    <section class="wordcloud-section">
+        {% for _ in range(6) %}
+        <div class="wordcloud-container">
+            <img src="data:image/png;base64,{{ wordcloud_image|safe }}" alt="Word Cloud" class="responsive-image">
+        </div>
+        {%endfor%}
+    </section>
+    <section class="download-section">
+        <a href="{{ url_for('download_wordcloud') }}" class="download-link" download="wordcloud.png">
+            Download Word Cloud
+        </a>
+    </section>
+{% endblock %}
+
+<!-- boilerplate code. will fix later. -->
