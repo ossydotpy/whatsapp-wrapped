@@ -204,7 +204,7 @@ button:hover {
   padding: 40px 0; /* Added padding for vertical spacing */
 }
 
-.wordcloud-container {
+.image-container {
   margin: 10px;
   border: 2px solid #fff;
   border-radius: 10px;
@@ -213,7 +213,7 @@ button:hover {
   box-sizing: border-box;
 }
 
-.wordcloud-container img {
+.image-container img {
   width: 100%;
   height: auto;
   max-width: 100%; 

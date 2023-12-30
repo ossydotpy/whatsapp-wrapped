@@ -7,17 +7,36 @@
         <h1>Your Whatsapp Wrapped!</h1>
     </header>
     <section class="wordcloud-section">
-        {% for _ in range(6) %}
-        <div class="wordcloud-container">
-            <img src="data:image/png;base64,{{ wordcloud_image|safe }}" alt="Word Cloud" class="responsive-image">
+
+        <div class="image-container">
+            <img src="data:image/png;base64,{{ chat_count_img|safe }}" alt="Word Cloud" class="responsive-image">
         </div>
-        {%endfor%}
+
+        <div class="image-container">
+            <img src="data:image/png;base64,{{ top_ini|safe }}" alt="Word Cloud" class="responsive-image">
+        </div>
+        <div class="image-container">
+            <img src="data:image/png;base64,{{ individual_img|safe }}" alt="Word Cloud" class="responsive-image">
+        </div>
+
+        <div class="image-container">
+            <img src="data:image/png;base64,{{ peak_img|safe }}" alt="Word Cloud" class="responsive-image">
+        </div>
+
+        <div class="image-container">
+            <img src="data:image/png;base64,{{ sentiments_img|safe }}" alt="Word Cloud" class="responsive-image">
+        </div>
+
+        <div class="image-container">
+            <img src="data:image/png;base64,{{ sentiments_img|safe }}" alt="Word Cloud" class="responsive-image">
+        </div>
+        
     </section>
-    <section class="download-section">
+    <!-- <section class="download-section">
         <a href="{{ url_for('download_wordcloud') }}" class="download-link" download="wordcloud.png">
             Download Word Cloud
         </a>
-    </section>
+    </section> -->
 {% endblock %}
 
 <!-- boilerplate code. will fix later. -->
