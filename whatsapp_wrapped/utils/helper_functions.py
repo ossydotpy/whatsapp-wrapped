@@ -259,7 +259,7 @@ def edit_individual_count_image(some_api_result: dict):
     width, height = image.size
     draw = ImageDraw.Draw(image)
 
-    bold_font = ImageFont.truetype(f'{get_fonts_dir()}/OpenSans-Bold.ttf', 150)
+    bold_font = ImageFont.truetype(f'{get_fonts_dir()}/OpenSans-Bold.ttf', 120)
 
     counts = some_api_result.get('message_count_by_sender', None)
     senders = list(counts.keys())
@@ -271,7 +271,7 @@ def edit_individual_count_image(some_api_result: dict):
     sender2_count = str(counts[sender2])
 
     sender1_position = (0.02 * width, 0.58 * height)
-    sender2_position = (0.59 * width, 0.68 * height)
+    sender2_position = (0.50 * width, 0.69 * height)
     sender1_count_position = (0.05 * width, 0.67 * height)
     sender2_count_position = (0.61 * width, 0.78 * height)
 
