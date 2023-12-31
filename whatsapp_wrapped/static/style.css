@@ -196,15 +196,16 @@ button:hover {
   font-size: 2.5em;
   color: #fff;
 }
-/* Word Cloud Section */
+
 .wordcloud-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 40px 0; /* Added padding for vertical spacing */
+  padding: 40px 0;
 }
 
 .image-container {
+  position: relative; /* Make the image container a positioning context */
   margin: 10px;
   border: 2px solid #fff;
   border-radius: 10px;
@@ -216,8 +217,20 @@ button:hover {
 .image-container img {
   width: 100%;
   height: auto;
-  max-width: 100%; 
+  max-width: 100%;
 }
+
+.image-description {
+  position: absolute; /* Position the description absolutely within the container */
+  bottom: 10px; /* Adjust the vertical position as needed */
+  left: 10px; /* Adjust the horizontal position as needed */
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  color: #fff; /* White text for better contrast */
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
 
 /* Download Section */
 .download-section {

@@ -37,7 +37,7 @@ def generate_wordcloud():
     )
 
     wordcloud = WordCloud(
-        stopwords=stopwords, width=600, height=1200, max_words=100
+        stopwords=stopwords, width=600, height=1200, max_words=50
     ).generate(text)
 
     img_buffer = io.BytesIO()

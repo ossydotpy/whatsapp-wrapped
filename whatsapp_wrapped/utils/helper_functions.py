@@ -9,7 +9,8 @@ from flask import url_for
 sia = SentimentIntensityAnalyzer()
 
 current_year = datetime.now().year
-new_year = f"1/1/{str(current_year)}"
+# new_year = f"1/1/{str(current_year)}"
+new_year = f"1/1/2023"
 new_year_timestamp = pd.to_datetime(new_year, format="%m/%d/%Y").date()
 
 

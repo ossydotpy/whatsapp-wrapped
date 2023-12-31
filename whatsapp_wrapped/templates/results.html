@@ -5,30 +5,49 @@
 {% block content %}
     <header>
         <h1>Your Whatsapp Wrapped!</h1>
+        <span>Buckle up for a journey through your personal highlight reel from the past year.</span>
     </header>
     <section class="wordcloud-section">
 
         <div class="image-container">
             <img src="data:image/png;base64,{{ chat_count_img|safe }}" alt="Word Cloud" class="responsive-image">
+            <div class="image-description">
+                <p>Total messages excahanged between the two of you</p>
+            </div>
         </div>
 
         <div class="image-container">
             <img src="data:image/png;base64,{{ top_ini|safe }}" alt="Word Cloud" class="responsive-image">
+            <div class="image-description">
+                <p>See who is the top initiator for your conversations.</p>
+            </div>
         </div>
+
+        <div class="image-container">
+            <img src="data:image/png;base64,{{ wordcloud|safe }}" alt="Word Cloud" class="responsive-image">
+            <div class="image-description">
+                <p>Most used words between the two of you</p>
+            </div>
+        </div>
+
         <div class="image-container">
             <img src="data:image/png;base64,{{ individual_img|safe }}" alt="Word Cloud" class="responsive-image">
+            <div class="image-description">
+                <p>How many messages did each of you send?</p>
+            </div>
         </div>
 
         <div class="image-container">
             <img src="data:image/png;base64,{{ peak_img|safe }}" alt="Word Cloud" class="responsive-image">
+            <div class="image-description">
+                <p>What was the most busiest time of your frienship?</p>
+            </div>
         </div>
-
         <div class="image-container">
             <img src="data:image/png;base64,{{ sentiments_img|safe }}" alt="Word Cloud" class="responsive-image">
-        </div>
-
-        <div class="image-container">
-            <img src="data:image/png;base64,{{ sentiments_img|safe }}" alt="Word Cloud" class="responsive-image">
+            <div class="image-description">
+                <p>Who was the most positive/negative?</p>
+            </div>
         </div>
         
     </section>
