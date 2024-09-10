@@ -1,6 +1,6 @@
 # Whatsapp Wrapped
 ---
-
+see https://chatalyze.streamlit.app for an updated version using strealit
 # Usage
 Upload your whatsapp chat history and let us take care of the rest.
 
